@@ -1,7 +1,7 @@
 let n = 1;
 getPAGE.onclick = () => {
     const request = new XMLHttpRequest()
-    request.open('GET', `/page${n + 1}`)
+    request.open('GET', `./page${n + 1}`)
     request.onreadystatechange = () => {
         if (request.readyState === 4 && request.status === 200) {
             const array = JSON.parse(request.response)//把JSON字符串变成数组
@@ -19,7 +19,7 @@ getPAGE.onclick = () => {
 
 getJSON.onclick = () => {
     const request = new XMLHttpRequest()
-    request.open('GET', '/5.json')
+    request.open('GET', './5.json')
     request.onreadystatechange = () => {
         if (request.readyState === 4 && request.status === 200) {
             console.log(request.response)
@@ -32,7 +32,7 @@ getJSON.onclick = () => {
 
 getXML.onclick = () => {
     const request = new XMLHttpRequest()
-    request.open('GET', '/4.xml')
+    request.open('GET', './4.xml')
     request.onreadystatechange = () => {
         if (request.readyState === 4 && request.status === 200) {
             //responseXML自动把信息变成document对象
@@ -47,7 +47,7 @@ getXML.onclick = () => {
 
 getHTML.onclick = () => {
     const request = new XMLHttpRequest()
-    request.open('GET', '/3.html')
+    request.open('GET', './3.html')
     request.onload = () => {
         //创建一个div
         const div = document.createElement('div')
@@ -65,7 +65,7 @@ getHTML.onclick = () => {
 
 getJS.onclick = () => {
     const request = new XMLHttpRequest()
-    request.open('GET', '/2.js')
+    request.open('GET', './2.js')
     request.onload = () => {
         //创建script标签
         const script = document.createElement('script')
@@ -82,7 +82,7 @@ getJS.onclick = () => {
 
 getCSS.onclick = () => {
     const request = new XMLHttpRequest();
-    request.open('GET', '/style.css');
+    request.open('GET', './style.css');
     request.onreadystatechange = () => {
         //下载完成但并不知道是成功2xx还是失败4xx
         if (request.readyState === 4) {//如果request的readyState等于4，4是状态码，说明下载完成
