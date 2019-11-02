@@ -1,4 +1,4 @@
-let n = 1;//声明最开始是页面1
+let n = 1;
 getPAGE.onclick = () => {
     const request = new XMLHttpRequest()
     request.open('GET', `/page${n + 1}`)
